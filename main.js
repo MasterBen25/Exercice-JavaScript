@@ -9,6 +9,7 @@ swNight.addEventListener("click", function(e) {
     case "img-switch":
       document.body.classList.toggle("color-txt-wh");
       document.body.classList.toggle("dark-bg");
+      document.body.style.transition = "0.3s linear";
       break;
     default:
       null;
