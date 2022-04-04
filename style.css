@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 body {
+  margin: 0;
   background-color: #F2F2E6;
 }
 
@@ -57,6 +58,7 @@ hr {
   margin-left: 20px;
 }
 #switch-night {
+  cursor: pointer;
   height: 52px;
   width: 52px;
   border: 2px solid #000;
@@ -83,6 +85,7 @@ hr {
   justify-content: center;
 }
 .bouton-jour {
+  cursor: pointer;
   font-family: sans-serif;
   font-size: 1.2rem;
   height: 2rem;
@@ -122,4 +125,58 @@ hr {
 }
 .block {
   display: block;
+}
+
+/* ------------------ Pop Up Form --------------------- */
+
+#open-form {
+  display: block;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  height: 2rem;
+  width: 4rem;
+  margin: 0 auto;
+  color: #fff;
+  background-color: #FA4D1F;
+  border: none;
+  border-radius: 5px;
+}
+#open-form:hover {
+  color: #fff;
+  background-color: #23B6FA;
+  height: 2.5rem;
+  width: 4.5rem;
+  margin-top: -0.5rem;
+  transition: 0.3s;
+}
+.answer {
+  color: #23B6FA;
+  font-family: sans-serif;
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: 5px;
+}
+#formulaire-pop {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+#border-form {
+  border: 2px solid #777;
+  margin: 10px 0;
+  padding: 10px;
+  display: inline-block;
+}
+.input-form{
+  margin: 10px;
+}
+#form-cust {
+  z-index: 10;
+  background-color: #fff;
+  padding: 10px;
+  margin: 5% 20% 0 20%;
 }
