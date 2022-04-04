@@ -83,3 +83,24 @@ btnNuit.addEventListener('click', () => {
   boxNuit.classList.add("block", "visible");
   btnNuit.classList.add("bouton-active");
 })
+
+/* ------------------ Pop Up Form --------------------- */
+
+const open = document.querySelector("#open-form");
+const answer = document.querySelector(".answer");
+const form = document.querySelector("#formulaire-pop");
+const send = document.querySelector("#send");
+const cancel = document.querySelector("#cancel");
+
+open.addEventListener('click', () => {
+  form.classList.add("visible");
+  answer.classList.remove("visible");
+})
+send.addEventListener("click", function() {
+  form.classList.remove("visible");
+  answer.classList.add("visible");
+})
+cancel.addEventListener("click", function() {
+  form.classList.remove("visible");
+})
+
