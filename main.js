@@ -16,7 +16,6 @@ swNight.addEventListener("click", function(e) {
   }
 })
 
-
 /* --------------------- Cycle journée ---------------------*/
 
 const btnMatin = document.querySelector("#bouton-matin");
@@ -27,7 +26,7 @@ const boxMatin = document.querySelector("#img-matin");
 const boxMidi = document.querySelector("#img-midi");
 const boxSoir = document.querySelector("#img-soir");
 const boxNuit = document.querySelector("#img-nuit");
-const btn = document.querySelectorAll(".bouton-jour")
+const btn = document.querySelectorAll(".bouton-jour");
 
 btnMatin.addEventListener('click', () => {
   btnMidi.classList.remove("bouton-active");
@@ -92,16 +91,37 @@ const answer = document.querySelector(".answer");
 const form = document.querySelector("#formulaire-pop");
 const send = document.querySelector("#send");
 const cancel = document.querySelector("#cancel");
+const inputPrenom = document.querySelector('input[name="input1"]');
+const inputNom = document.querySelector('input[name="input2"]');
+const inputAdresse = document.querySelector('input[name="input3"]');
+const inputMail = document.querySelector('input[name="input4"]');
+const boxRep = document.querySelector("#rep-form");
 
 open.addEventListener('click', () => {
   form.classList.add("visible");
   answer.classList.remove("visible");
+  inputPrenom.value = "";
+  inputNom.value = "";
+  inputAdresse.value = "";
+  inputMail.value = "";
 })
+
 send.addEventListener("click", function() {
   form.classList.remove("visible");
   answer.classList.add("visible");
-})
-cancel.addEventListener("click", function() {
-  form.classList.remove("visible");
+  boxRep.style.border = "3px solid #777";
+  document.querySelector("#rep-form").innerHTML = `
+      <h3>Récapitulatif</h3>
+      <p>Prénom : ${inputPrenom.value}</p>
+      <p>Nom : ${inputNom.value}</p>
+      <p>Adresse : ${inputAdresse.value}</p>
+      <p>E-mail : ${inputMail.value}</p>
+    `;
 })
 
+cancel.addEventListener("click", function() {
+  form.classList.remove("visible");
+  document.querySelector("#rep-form").innerHTML = `
+      <p></p>
+    `;
+})
