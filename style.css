@@ -186,3 +186,22 @@ hr {
   font-family: sans-serif;
   margin: 0 40%;
 }
+
+/* ------------------ Plus ou moins --------------------- */
+
+#boxCalc {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#boxCalc button {
+  height: 70px;
+  width: 50px;
+  font-size: 2rem;
+  margin: 0 20px;
+}
+.valeurButt {
+  font-size: 3rem;
+  font-weight: 500;
+  margin: 10px 20px 0 20px;
+}
