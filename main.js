@@ -125,3 +125,20 @@ cancel.addEventListener("click", function() {
       <p></p>
     `;
 })
+
+/* ------------------ Plus ou moins --------------------- */
+
+const plus = document.querySelector("#buttonP");
+const moins = document.querySelector("#buttonM");
+let valButt = document.querySelector(".valeurButt");
+val = 0;
+
+plus.addEventListener("click", function () {
+  val++;
+  valButt.innerHTML = val;
+
+})
+moins.addEventListener("click", function () {
+  val--;
+  valButt.innerHTML = val;
+})
