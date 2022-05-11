@@ -142,3 +142,46 @@ moins.addEventListener("click", function () {
   val--;
   valButt.innerHTML = val;
 })
+
+/* ------------------ Fonts --------------------- */
+
+const verda = document.querySelector("#verda");
+const elve = document.querySelector("#elve");
+const sans = document.querySelector("#s-s");
+const wNormal = document.querySelector("#wNormal");
+const wBold = document.querySelector("#wBold");
+const exemple = document.querySelector("#fontsExemple");
+
+verda.addEventListener("click", function () {
+  exemple.style.fontFamily = "verdana";
+})
+elve.addEventListener("click", function () {
+  exemple.style.fontFamily = "elvetica";
+})
+sans.addEventListener("click", function () {
+  exemple.style.fontFamily = "sans-serif";
+})
+wNormal.addEventListener("click", function () {
+  exemple.style.fontWeight = "normal";
+})
+wBold.addEventListener("click", function () {
+  exemple.style.fontWeight = "bold";
+})
+
+
+/* ------------------ Heure --------------------- */
+
+
+let displayDay = document.getElementById('displayDay');
+let displayHours = document.getElementById('displayHours');
+let displayMinutes = document.getElementById('displayMinutes');
+let displaySeconds = document.getElementById('displaySeconds');
+let currentTime = new Date();
+
+function setTime () {
+  displayHours.innerHTML = currentTime.getHours() + " heures";
+  displayMinutes.innerHTML = currentTime.getMinutes() + " minutes";
+  displaySeconds.innerHTML = currentTime.getSeconds() + " secondes";
+}
+setTime();
+console.log(currentTime);
